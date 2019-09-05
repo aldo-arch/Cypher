@@ -1,0 +1,19 @@
+#!/bin/bash
+echo "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG" | tr '[A-Z]' '[X-ZA-W]'
+# output: QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD
+
+# dekodim
+echo "QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD" | tr '[X-ZA-W]' '[A-Z]'
+# output: THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
+
+
+# me ROT13
+echo "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG" | tr '[A-Z]' '[N-ZA-M]'
+# output: GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT
+
+echo "GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT" | tr '[N-ZA-M]' '[A-Z]'
+# output: THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
+
+
+# versioni case sensitive i ROT13
+tr '[A-Za-z]' '[N-ZA-Mn-za-m]'
